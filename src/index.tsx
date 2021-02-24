@@ -1,10 +1,6 @@
-import * as React from 'react'
-import styles from './styles.module.css'
+import Button from './components/Button';
+import GlobalStyle from './components/GlobalStyle'
+import Sidebar from './components/Sidebar'
+import { Layout } from './layouts/sidebar-content'
 
-interface Props {
-  text: string
-}
-
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export { Button, GlobalStyle, Sidebar, Layout }

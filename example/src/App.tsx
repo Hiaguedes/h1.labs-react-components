@@ -1,10 +1,22 @@
 import React from 'react'
 
-import { ExampleComponent } from '@h1.labs/react-components'
-import '@h1.labs/react-components/dist/index.css'
+import { Button, GlobalStyle, Sidebar, Layout } from '@h1.labs/react-components'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return(
+    <>
+    <GlobalStyle />
+    <Sidebar>
+      AAAAAAAA
+    </Sidebar>
+    <Layout>
+      <div style={{width: '50px', height: '100vh', marginRight: '10rem'}}/>
+    <div style={{padding: '1rem'}}>
+      <Button>Oi</Button>
+    </div>
+    </Layout>
+  </>
+  )
 }
 
 export default App
