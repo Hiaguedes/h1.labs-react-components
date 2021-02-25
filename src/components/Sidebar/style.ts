@@ -1,11 +1,10 @@
-import styled, { css } from 'styled-components'
-
+import styled, { css } from "styled-components";
 interface SidebarBaseProps {
-  visible: boolean
+  visible: boolean;
 }
 
 const SidebarBase = styled.aside<SidebarBaseProps>`
-  background-color: #d9dddc;
+  background-color: ${({ theme }) => theme.sidebarBackground};
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
   height: 100vh;
   width: 300px;
@@ -24,12 +23,12 @@ const SidebarBase = styled.aside<SidebarBaseProps>`
       left: -250px;
       transition: left 0.5s ease;
     `}
-`
+`;
 
 const Content = styled.div`
   width: 85%;
   height: 90%;
-`
+`;
 
 const SideButton = styled.button`
   position: absolute;
@@ -40,6 +39,6 @@ const SideButton = styled.button`
   color: white;
   background-color: #000;
   cursor: pointer;
-`
+`;
 
-export const SidebarStyles = { SidebarBase, Content, SideButton }
+export const SidebarStyles = { SidebarBase, Content, SideButton };

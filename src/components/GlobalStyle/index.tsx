@@ -1,6 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
+import { Colors } from "../../contexts/ThemeProvider/theme";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ theme: Colors }>`
     * {
         margin: 0;
         padding: 0;
@@ -10,13 +11,15 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a { 
-        color: black;
+        color: ${({ theme }) => theme.linkColor};
     }
 
     body { 
         width: 100vw;
         height: 100vh;
         font-family: 'Helvetica', 'serif';
+        background-color: ${({ theme }) => theme.background};
+        color: ${({ theme }) => theme.textDefaultColor}
     }
 `;
 
